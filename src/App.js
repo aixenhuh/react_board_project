@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './App.css'
-import ReactIndex from './reactIndex';
+import PhoneForm from './components/PhoneForm';
 
 class App extends Component {
   render() {
     return (
-      <ReactIndex ></ReactIndex>
+      <div>
+        <PhoneForm />
+      </div>
     );
   }
 }

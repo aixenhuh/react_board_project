@@ -1,41 +1,48 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Counter extends Component {
+class Counter extends Component{
     state = {
-        number: 0
+        number : 0
     }
 
-    handleIncrease = () => {
-        this.setState({
-            number: this.state.number + 1
-        });
+    constructor(props) {
+        super(props);
+        console.log('constructor');
     }
 
-    handleDecrease = () => {
-        this.setState({
-            number: this.state.number - 1
-        });
+    componentWillMount() {
+        console.log('componentWillMount (deprecated)');
+    }
+    
+    componentDidMount() {
+        console.log('componentDidMount');
     }
 
-    render() {
-        return (
-            <div>
-                <h1>카운터</h1>
-                <div>값: {this.state.number}</div>
-                <button onClick={this.handleIncrease}>+</button>
-                <button onClick={this.handleDecrease}>-</button>
-            </div>
-        );
+    componentWillReceiveProps(props) {
+
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+
+    }
+
+    shouldComponentUpdate(nextProps, nextState){
+        return true;
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState, snapshot){
+
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot){
+
+    }
+
+    componentWillUnmount() {
+        
     }
 }
-
-var Person = (function () {
-    function Person(name) {
-        this._name = name;
-    }
-
-
-    personalbar.prototype.sayHi = function () {
-
-    }
-})
